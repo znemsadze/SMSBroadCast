@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="orastore2" transaction-type="RESOURCE_LOCAL">
+		<class>model.SmsInfo</class>
+		<class>model.SmsQueue</class>
+		<class>model.SmsState</class>
+		<class>model.SmsType</class>
+		<class>model.SmsSender</class>
+	 <properties>
+	 	<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+		<property name="hibernate.id.new_generator_mappings" value="false" />
+		<property name="hibernate.generate_statistics" value="false"/>
+        <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+		<property name="javax.persistence.jdbc.url"  value="jdbc:oracle:thin:@//yourhost:1521/yorservicename"/>
+		<property name="javax.persistence.jdbc.user" value="user"/>
+		<property name="javax.persistence.jdbc.password" value="password"/>
+		<property name ="hibernate.show_sql" value = "true" />
+		<property name="hibernate.default_schema" value="CCARE_PORTAL"/>
+	</properties>	
+	</persistence-unit>
+ 
+	
+</persistence>
